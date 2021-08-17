@@ -1,0 +1,11 @@
+<p>color works!</p>
+<select #element (change)="changeColor(element.value)">
+  <option>red</option>
+  <option>black</option>
+  <option>white</option>
+  <option>blue</option>
+  <option>gray</option>
+  <option>yellow</option>
+</select>
+<div style="width: 500px;height: 500px" [style.background-color]="color"></div>
+
