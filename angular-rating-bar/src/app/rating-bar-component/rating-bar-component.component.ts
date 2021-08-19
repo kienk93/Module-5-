@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output, SimpleChanges} from '@angular/core';
+import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
 import {IRatingUnit} from '../irating-unit';
 
 @Component({
@@ -6,7 +6,7 @@ import {IRatingUnit} from '../irating-unit';
   templateUrl: './rating-bar-component.component.html',
   styleUrls: ['./rating-bar-component.component.scss']
 })
-export class RatingBarComponentComponent implements OnInit {
+export class RatingBarComponentComponent implements OnInit, OnChanges {
   @Input()
   max = 10;
   @Input()
@@ -20,6 +20,14 @@ export class RatingBarComponentComponent implements OnInit {
   constructor() {
   }
 
+  ngOnChanges(changes: SimpleChanges) {
+    if ('max' in changes) {
+      let max = changes.max.currentValue;
+      max = typeof max === 'undefined' ? 5 : max;
+      this.max = max;
+      this.calculate(max, this.ratingValue);
+    }
+  }
   calculate(max, ratingValue) {
     this.ratingUnits = Array.from({length: max}, (_, index) => ({
         value: index + 1,
