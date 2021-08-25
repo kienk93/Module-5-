@@ -7,9 +7,10 @@ import {BookListComponent} from '../../component/book-list/book-list.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {BookCreateComponent} from '../../component/book-create/book-create.component';
 import {MatTableModule} from '@angular/material/table';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BookEditComponent} from '../../component/book-edit/book-edit.component';
 import {BookDeleteComponent} from '../../component/book-delete/book-delete.component';
+import {BookViewComponent} from '../../component/book-view/book-view.component';
 
 
 @NgModule({
@@ -17,14 +18,16 @@ import {BookDeleteComponent} from '../../component/book-delete/book-delete.compo
     BookListComponent,
     BookCreateComponent,
     BookEditComponent,
-    BookDeleteComponent
+    BookDeleteComponent,
+    BookViewComponent
   ],
   imports: [
     CommonModule,
     BookRoutingModule,
     HttpClientModule,
     MatTableModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class BookModule { }

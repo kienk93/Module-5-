@@ -12,7 +12,6 @@ import { BookViewComponent } from './component/book-view/book-view.component';
 @NgModule({
   declarations: [
     AppComponent,
-    BookViewComponent,
   ],
   imports: [
     BrowserModule,
