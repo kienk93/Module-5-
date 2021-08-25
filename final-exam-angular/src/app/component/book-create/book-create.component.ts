@@ -24,7 +24,7 @@ export class BookCreateComponent implements OnInit {
     this.bookService.createBook(book).subscribe(()=> {
       this.bookForm.reset();
       this.router.navigate(['/books/list']);
-      alert('Tạo thành công');
+      // alert('Tạo thành công');
     }, error => {
       console.log(error)
     })

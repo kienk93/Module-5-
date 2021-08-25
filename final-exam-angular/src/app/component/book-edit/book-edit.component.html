@@ -1,6 +1,6 @@
 <h1>Cập nhật sách</h1>
 <form [formGroup]="bookForm" (ngSubmit)="updateBook(id)">
-  <table>
+  <table class="table-primary w-25">
     <tr>
       <td>Tên sách</td>
       <td><input type="text" formControlName="title"></td>
@@ -15,7 +15,7 @@
     </tr>
     <tr>
       <td></td>
-      <td><button>Cập nhật</button></td>
+      <td><button class="btn-info">Cập nhật</button></td>
     </tr>
   </table>
 </form>
