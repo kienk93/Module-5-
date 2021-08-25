@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "product-manager-CRUD": {
+    "angular-material": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/product-manager-CRUD",
+            "outputPath": "dist/angular-material",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -69,18 +69,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "product-manager-CRUD:build"
+            "browserTarget": "angular-material:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "product-manager-CRUD:build:production"
+              "browserTarget": "angular-material:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "product-manager-CRUD:build"
+            "browserTarget": "angular-material:build"
           }
         },
         "test": {
@@ -118,16 +118,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "product-manager-CRUD:serve"
+            "devServerTarget": "angular-material:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "product-manager-CRUD:serve:production"
+              "devServerTarget": "angular-material:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "product-manager-CRUD"
+  "defaultProject": "angular-material"
 }

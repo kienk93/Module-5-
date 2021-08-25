@@ -3,24 +3,29 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {BookModule} from './module/book/book.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSliderModule} from '@angular/material/slider';
-import {ReactiveFormsModule} from '@angular/forms';
-import { BookViewComponent } from './component/book-view/book-view.component';
+import { TestMaterialComponent } from './component/test-material/test-material.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {FormsModule} from '@angular/forms';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BookViewComponent,
+    TestMaterialComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BookModule,
     BrowserAnimationsModule,
     MatSliderModule,
-    ReactiveFormsModule
+    MatFormFieldModule,
+    FormsModule,
+    MatIconModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
